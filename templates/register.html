@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<h3>Register</h3>
+        <form action="/register" method="POST" style="margin-bottom: 150px;">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            <div class="form-group">
+            <label for="nickname">Nickname:</label>
+            <input type="text" class="form-control" id="nickname" name="nickname">
+            </div>
+            <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="form-group">
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password">
+            </div>
+            <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" value="Register" class="btn btn-default">Sign Me Up!</button>
+        </form>
+
+
+{% endwith %}
+{% endblock%}

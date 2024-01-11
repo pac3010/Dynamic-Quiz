@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends "base.html" %}
+    <title>{% block title %}QuizAI{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        {{ super() }}
+        <h1>Ini Header</h1>
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block content %}
+        <h3>Weather Forecast</h3>
+        <form action="/weather" method="POST" style="margin-bottom:200px";>
+            <label for="cityName">Enter City Name</label>
+            <input type="text" id="cityName" name="city">
+            <input type="submit" type="submit" name="Check the Weather">
+        </form>
+
+        <div id="weatherData">
+
+        </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <h5>Ini footer</h5>
+    </footer>
+</body>
+</html>

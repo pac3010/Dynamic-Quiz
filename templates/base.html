@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}QuizAI{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    
+    {% if 'nickname' in session %}
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">QuizAI</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a class="active" href="/index">Home</a></li>
+                <li><a href="/quiz">Quiz</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+            </div>
+        </nav>
+    {% else %}
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">QuizAI</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/index">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            </div>
+        </nav>
+    {% endif %}
+    
+
+    <main>
+        <div class="container">
+        {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid bg-2 text-center">
+            <h2>QuizAI</h2>
+            <p>By: Putri Anggia Cahyani</p>
+            <p>Find me on</p>
+            <a href="https://www.linkedin.com/in/putri-anggia-cahyani-b4129b1a7/" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/anggia.chyn/" class="fa fa-instagram"></a>
+            <a href="https://github.com/pac3010" class="fa fa-github"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

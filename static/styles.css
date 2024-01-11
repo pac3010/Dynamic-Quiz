@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body {
+    /* Define your common background, font styles, etc. */
+    background-color: #e46bb0bd;
+    font-family: 'Noto Sans';
+}
+
+footer{
+    font-family: Fredoka;
+}
+
+nav {
+    font-family: 'Fredoka';
+    background-color: #ffffff;
+    color: #fff;
+    padding: 35px;
+    width: 100%;
+ 
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-logo{
+    margin-right: auto;
+}
+
+.bg-2 { 
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 70px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+  }
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.fa-linkedin {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.fa-github {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
